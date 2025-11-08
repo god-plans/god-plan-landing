@@ -9,7 +9,7 @@
             alt="God Plan Logo"
             class="w-8 h-8"
           />
-          <span class="font-bold text-xl text-gray-900 dark:text-white">God Plan</span>
+            <span class="font-bold text-xl text-gray-900 dark:text-white">{{ t('header.brand') }}</span>
         </NuxtLink>
 
         <!-- Desktop Navigation -->
@@ -48,7 +48,7 @@
             @click="toggleTheme"
             class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
-            <v-icon v-if="colorMode.preference === 'dark'" size="20">mdi-white-balance-sunny</v-icon>
+            <v-icon v-if="colorMode.preference === 'dark'" size="20">mdi-weather-sunny</v-icon>
             <v-icon v-else size="20">mdi-weather-night</v-icon>
           </button>
 
@@ -102,13 +102,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 // @ts-ignore - useSwitchLocalePath is auto-imported by @nuxtjs/i18n module
 const switchLocalePath = useSwitchLocalePath()
 // @ts-ignore - useColorMode is auto-imported by @nuxtjs/color-mode module
 const colorMode = useColorMode()
-const { t, locale } = useI18n()
+const { t, locale, setLocale } = useI18n()
+
+// Initialize dark class on mount
+onMounted(() => {
+  if (process.client && colorMode.preference === 'dark') {
+    document.documentElement.classList.add('dark')
+  }
+})
 
 const mobileMenuOpen = ref(false)
 
@@ -129,7 +136,19 @@ const navItems = [
 ]
 
 const toggleTheme = () => {
-  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+  // @ts-ignore - preference is available on colorMode
+  const newTheme = colorMode.preference === 'dark' ? 'light' : 'dark'
+  colorMode.preference = newTheme
+
+  // Manually add/remove the 'dark' class for Tailwind dark mode
+  if (process.client) {
+    const html = document.documentElement
+    if (newTheme === 'dark') {
+      html.classList.add('dark')
+    } else {
+      html.classList.remove('dark')
+    }
+  }
 }
 
 const toggleMobileMenu = () => {
@@ -140,13 +159,12 @@ const closeMobileMenu = () => {
   mobileMenuOpen.value = false
 }
 
-const switchToLocale = (localeCode: string) => {
-  // @ts-ignore - navigateTo is auto-imported by Nuxt
-  navigateTo(switchLocalePath(localeCode))
+const switchToLocale = async (localeCode: string) => {
+  await setLocale(localeCode)
 }
 
-const setLocaleAndClose = (newLocale: string) => {
-  switchToLocale(newLocale)
+const setLocaleAndClose = async (newLocale: string) => {
+  await switchToLocale(newLocale)
   closeMobileMenu()
 }
 </script>

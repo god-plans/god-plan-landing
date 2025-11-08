@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     globalName: '__NUXT_COLOR_MODE__',
     componentName: 'ColorScheme',
     classPrefix: '',
-    classSuffix: '',
+    classSuffix: 'dark',
     storageKey: 'nuxt-color-mode'
   },
 

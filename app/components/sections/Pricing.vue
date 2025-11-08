@@ -1,5 +1,5 @@
 <template>
-  <section id="pricing" class="pricing-section py-20 bg-gray-50 dark:bg-gray-900">
+  <section id="pricing" class="pricing-section py-20 bg-gray-50 !dark:bg-gray-900">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -36,10 +36,10 @@
             <div
               v-for="feature in plan.features"
               :key="feature"
-              class="flex items-center text-gray-700 dark:text-gray-300"
+              class="flex items-center text-gray-700 dark:text-gray-200"
             >
-              <v-icon size="16" class="text-green-500 me-3">mdi-check-circle</v-icon>
-              <span class="text-sm">{{ feature }}</span>
+              <v-icon size="16" class="text-green-500 dark:text-green-400 me-3">mdi-check-circle</v-icon>
+              <span class="text-sm text-gray-600 dark:text-gray-300">{{ feature }}</span>
             </div>
           </div>
 
@@ -91,21 +91,38 @@ const plans = {
     price: t('pricing.plans.free.price'),
     period: t('pricing.plans.free.period'),
     description: t('pricing.plans.free.description'),
-    features: t('pricing.plans.free.features')
+    features: [
+      t('pricing.plans.free.features[0]'),
+      t('pricing.plans.free.features[1]'),
+      t('pricing.plans.free.features[2]'),
+      t('pricing.plans.free.features[3]')
+    ]
   },
   pro: {
     name: t('pricing.plans.pro.name'),
-    price: t('pricing.plans.pro.price'),
-    period: t('pricing.plans.pro.period'),
+    price: 'Coming Soon',
+    period: '',
     description: t('pricing.plans.pro.description'),
-    features: t('pricing.plans.pro.features')
+    features: [
+      t('pricing.plans.pro.features[0]'),
+      t('pricing.plans.pro.features[1]'),
+      t('pricing.plans.pro.features[2]'),
+      t('pricing.plans.pro.features[3]'),
+      t('pricing.plans.pro.features[4]')
+    ]
   },
   enterprise: {
     name: t('pricing.plans.enterprise.name'),
-    price: t('pricing.plans.enterprise.price'),
-    period: t('pricing.plans.enterprise.period'),
+    price: 'Coming Soon',
+    period: '',
     description: t('pricing.plans.enterprise.description'),
-    features: t('pricing.plans.enterprise.features')
+    features: [
+      t('pricing.plans.enterprise.features[0]'),
+      t('pricing.plans.enterprise.features[1]'),
+      t('pricing.plans.enterprise.features[2]'),
+      t('pricing.plans.enterprise.features[3]'),
+      t('pricing.plans.enterprise.features[4]')
+    ]
   }
 }
 

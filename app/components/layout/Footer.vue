@@ -10,7 +10,7 @@
               alt="God Plan Logo"
               class="w-8 h-8"
             />
-            <span class="font-bold text-xl">God Plan</span>
+            <span class="font-bold text-xl">{{ t('footer.brand') }}</span>
           </div>
           <p class="text-gray-300 mb-6">
             {{ t('footer.description') }}
@@ -59,7 +59,7 @@
             </li>
             <li>
               <NuxtLink to="/docs" class="text-gray-400 hover:text-white transition-colors">
-                Documentation
+                {{ t('footer.links.resources') }}
               </NuxtLink>
             </li>
           </ul>
@@ -71,17 +71,17 @@
           <ul class="space-y-2">
             <li>
               <NuxtLink to="/about" class="text-gray-400 hover:text-white transition-colors">
-                About Us
+                {{ t('footer.links.about') }}
               </NuxtLink>
             </li>
             <li>
               <a href="#contact" class="text-gray-400 hover:text-white transition-colors">
-                Contact
+                {{ t('footer.links.contact') }}
               </a>
             </li>
             <li>
               <a href="https://github.com/god-plan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-                GitHub
+                {{ t('footer.links.github') }}
               </a>
             </li>
           </ul>
@@ -95,10 +95,10 @@
         </p>
         <div class="flex items-center space-x-6 mt-4 md:mt-0">
           <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors">
-            Privacy Policy
+            {{ t('footer.privacy') }}
           </a>
           <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors">
-            Terms of Service
+            {{ t('footer.terms') }}
           </a>
         </div>
       </div>

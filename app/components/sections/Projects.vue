@@ -57,24 +57,34 @@ const projects = [
     features: ['SSR Ready', 'i18n Support', 'Dark Mode', 'Responsive']
   },
   {
-    name: 'God Panel (Next.js)',
-    description: t('projects.next.description'),
-    tech: ['Next.js', 'Material-UI', 'TypeScript', 'Tailwind'],
+    name: 'God Panel (React)',
+    description: 'Coming Soon',
+    tech: ['React', 'Vite', 'TypeScript', 'Tailwind'],
     image: '/images/projects/next-dashboard.svg',
-    demo: 'https://starter-next-js.vercel.app',
-    docs: '/docs/next',
-    github: 'https://github.com/god-plan/starter-next-js',
-    features: ['App Router', 'Server Components', 'API Routes', 'Responsive']
+    demo: null,
+    docs: null,
+    github: null,
+    features: ['Component Based', 'Modern React', 'Coming Soon', 'Coming Soon']
   },
   {
-    name: 'Documentation',
-    description: t('projects.docs.description'),
-    tech: ['VitePress', 'Vue', 'Markdown', 'TypeScript'],
+    name: 'God Panel (Angular)',
+    description: 'Coming Soon',
+    tech: ['Angular', 'TypeScript', 'Tailwind', 'RxJS'],
     image: '/images/projects/vite-docs.svg',
-    demo: '/docs',
-    docs: '/docs',
-    github: 'https://github.com/god-plan/god-panel-docs-vite',
-    features: ['Auto-generated', 'Search', 'Dark Mode', 'Mobile-friendly']
+    demo: null,
+    docs: null,
+    github: null,
+    features: ['Enterprise Ready', 'Type Safety', 'Coming Soon', 'Coming Soon']
+  },
+  {
+    name: 'God Kit (Vue & React)',
+    description: 'Coming Soon',
+    tech: ['Vue.js', 'React', 'Components', 'UI Kit'],
+    image: '/images/projects/nuxt-dashboard.svg',
+    demo: null,
+    docs: null,
+    github: null,
+    features: ['Reusable Components', 'Design System', 'Coming Soon', 'Coming Soon']
   }
 ]
 </script>

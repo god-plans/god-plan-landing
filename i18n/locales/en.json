@@ -5,17 +5,18 @@
     "features": "Features",
     "pricing": "Pricing",
     "contact": "Contact",
-    "docs": "Docs"
+    "docs": "Docs",
+    "language": "Language"
   },
   "hero": {
-    "title": "Divine Innovation Meets Modern Development",
-    "subtitle": "Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.",
+    "title": "Professional Dashboards, Landing Pages & UI Kits",
+    "subtitle": "Complete open-source solutions for modern web applications. From admin dashboards to landing pages and reusable component kits - everything you need to build exceptional digital experiences.",
     "getStarted": "Get Started",
     "viewProjects": "View Projects",
     "stats": {
-      "components": "50+",
+      "components": "100+",
       "componentsLabel": "Components",
-      "downloads": "10k+",
+      "downloads": "25k+",
       "downloadsLabel": "Downloads",
       "opensource": "100%",
       "opensourceLabel": "Open Source",
@@ -23,15 +24,15 @@
       "supportLabel": "Community"
     },
     "socialProof": {
-      "trustedBy": "Trusted by developers worldwide",
-      "companies": "Leading companies use our dashboards",
+      "trustedBy": "Trusted by developers and companies worldwide",
+      "companies": "Leading companies build with our solutions",
       "stars": "4.9/5",
       "starsLabel": "Average rating"
     }
   },
   "projects": {
-    "title": "Our Projects",
-    "subtitle": "Explore our collection of modern admin dashboards and tools",
+    "title": "Our Complete Suite",
+    "subtitle": "From powerful admin dashboards to stunning landing pages and reusable UI kits - discover our comprehensive collection of modern web solutions",
     "nuxt": {
       "description": "Modern admin dashboard built with Nuxt.js, Vuetify, and TypeScript"
     },
@@ -52,52 +53,52 @@
     }
   },
   "features": {
-    "title": "Why Choose God Plan?",
-    "subtitle": "Built with modern technologies and best practices",
+    "title": "Complete Web Development Solutions",
+    "subtitle": "Everything you need to build professional web applications, from dashboards to landing pages",
     "items": {
       "modern": {
-        "title": "Modern Design",
-        "description": "Beautiful, responsive interfaces built with modern design principles"
+        "title": "Modern Dashboards",
+        "description": "Professional admin dashboards with advanced data visualization, user management, and analytics"
       },
       "fast": {
-        "title": "Lightning Fast",
-        "description": "Optimized performance with SSR, code splitting, and lazy loading"
+        "title": "Landing Page Templates",
+        "description": "Conversion-optimized landing pages that showcase your products and drive business growth"
       },
       "responsive": {
-        "title": "Fully Responsive",
-        "description": "Perfect experience across all devices and screen sizes"
+        "title": "UI Component Kits",
+        "description": "Reusable component libraries for consistent design systems across all your applications"
       },
       "customizable": {
-        "title": "Highly Customizable",
-        "description": "Easily customize themes, layouts, and components to match your brand"
+        "title": "Fully Customizable",
+        "description": "Easily adapt themes, layouts, and components to perfectly match your brand identity"
       },
       "secure": {
-        "title": "Secure by Default",
-        "description": "Built with security best practices and regular security updates"
+        "title": "Enterprise Security",
+        "description": "Built with security best practices, authentication systems, and data protection standards"
       }
     },
     "benefits": {
-      "title": "Built for Developers, Loved by Teams",
-      "subtitle": "Join a community of developers building the next generation of admin dashboards",
+      "title": "Trusted by Developers & Businesses Worldwide",
+      "subtitle": "Join thousands of companies using our solutions to build exceptional digital experiences",
       "items": {
         "developer": {
-          "title": "Developer Experience",
-          "description": "Intuitive APIs and comprehensive documentation"
+          "title": "Developer-First Approach",
+          "description": "Intuitive APIs, comprehensive documentation, and developer-friendly architecture"
         },
         "production": {
           "title": "Production Ready",
-          "description": "Battle-tested components and best practices"
+          "description": "Battle-tested code with performance optimization, scalability, and reliability"
         },
         "community": {
-          "title": "Global Community",
-          "description": "Active community and regular updates"
+          "title": "Active Ecosystem",
+          "description": "Growing community, regular updates, and dedicated support for all products"
         }
       }
     }
   },
   "pricing": {
-    "title": "Simple, Transparent Pricing",
-    "subtitle": "Choose the plan that fits your needs",
+    "title": "Flexible Pricing for Every Project",
+    "subtitle": "From free open-source solutions to premium enterprise features - find the perfect plan for your development needs",
     "plans": {
       "free": {
         "name": "Free",
@@ -166,8 +167,8 @@
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Ready to get started? We'd love to hear from you.",
+    "title": "Ready to Build Something Amazing?",
+    "subtitle": "Whether you need a dashboard, landing page, or UI kit - let's discuss how we can help bring your vision to life.",
     "form": {
       "name": "Full Name",
       "email": "Email Address",
@@ -204,17 +205,26 @@
     "error": "There was an error sending your message. Please try again."
   },
   "footer": {
-    "description": "Modern admin dashboards built with divine innovation and cutting-edge technology.",
+    "brand": "God Plan",
+    "description": "Complete web development solutions - from professional dashboards and landing pages to reusable UI kits and component libraries.",
     "links": {
       "products": "Products",
       "company": "Company",
-      "resources": "Resources"
+      "resources": "Resources",
+      "about": "About Us",
+      "contact": "Contact",
+      "github": "GitHub"
     },
     "social": {
       "github": "GitHub",
       "twitter": "Twitter",
       "discord": "Discord"
     },
-    "copyright": "© 2025 God Plan. All rights reserved."
+    "copyright": "© 2025 God Plan. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "header": {
+    "brand": "God Plan"
   }
 }

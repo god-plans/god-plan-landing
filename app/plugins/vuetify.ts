@@ -11,6 +11,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       defaultTheme: 'light',
       themes: {
         light: {
+          dark: false,
           colors: {
             primary: '#6366f1',
             secondary: '#64748b',
@@ -19,6 +20,22 @@ export default defineNuxtPlugin((nuxtApp) => {
             info: '#2196f3',
             success: '#10b981',
             warning: '#f59e0b',
+            surface: '#ffffff',
+            'on-surface': '#1f2937',
+          }
+        },
+        dark: {
+          dark: true,
+          colors: {
+            primary: '#818cf8',
+            secondary: '#94a3b8',
+            accent: '#a5b4fc',
+            error: '#f87171',
+            info: '#60a5fa',
+            success: '#34d399',
+            warning: '#fbbf24',
+            surface: '#111827',
+            'on-surface': '#f9fafb',
           }
         }
       }
@@ -31,6 +48,12 @@ export default defineNuxtPlugin((nuxtApp) => {
   })
 
   nuxtApp.vueApp.use(vuetify)
+
+  // Sync Vuetify theme with Nuxt color mode
+  const colorMode = useColorMode()
+  watchEffect(() => {
+    vuetify.theme.change(colorMode.preference === 'dark' ? 'dark' : 'light')
+  })
 
   return {
     provide: {
