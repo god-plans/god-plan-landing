@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "docs": "Docs"
+  },
+  "hero": {
+    "title": "Divine Innovation Meets Modern Development",
+    "subtitle": "Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.",
+    "getStarted": "Get Started",
+    "viewProjects": "View Projects"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Explore our collection of modern admin dashboards and tools",
+    "nuxt": {
+      "description": "Modern admin dashboard built with Nuxt.js, Vuetify, and TypeScript"
+    },
+    "next": {
+      "description": "React admin dashboard with Next.js, Material-UI, and TypeScript"
+    },
+    "docs": {
+      "description": "Comprehensive documentation for all our projects"
+    },
+    "viewDemo": "View Demo",
+    "viewDocs": "View Docs",
+    "viewCode": "View Code"
+  },
+  "features": {
+    "title": "Why Choose God Plan?",
+    "subtitle": "Built with modern technologies and best practices",
+    "items": {
+      "modern": {
+        "title": "Modern Design",
+        "description": "Beautiful, responsive interfaces built with modern design principles"
+      },
+      "fast": {
+        "title": "Lightning Fast",
+        "description": "Optimized performance with SSR, code splitting, and lazy loading"
+      },
+      "responsive": {
+        "title": "Fully Responsive",
+        "description": "Perfect experience across all devices and screen sizes"
+      },
+      "customizable": {
+        "title": "Highly Customizable",
+        "description": "Easily customize themes, layouts, and components to match your brand"
+      },
+      "secure": {
+        "title": "Secure by Default",
+        "description": "Built with security best practices and regular security updates"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that fits your needs",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "Perfect for getting started",
+        "features": [
+          "Basic dashboard",
+          "5 projects",
+          "Community support",
+          "Basic analytics"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$29",
+        "period": "month",
+        "description": "For growing businesses",
+        "features": [
+          "Advanced dashboard",
+          "Unlimited projects",
+          "Priority support",
+          "Advanced analytics",
+          "Custom integrations"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "pricing",
+        "description": "For large organizations",
+        "features": [
+          "Everything in Pro",
+          "Dedicated support",
+          "Custom development",
+          "On-premise deployment",
+          "SLA guarantee"
+        ]
+      }
+    },
+    "cta": "Get Started"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to get started? We'd love to hear from you.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "Modern admin dashboards built with divine innovation and cutting-edge technology.",
+    "links": {
+      "products": "Products",
+      "company": "Company",
+      "resources": "Resources"
+    },
+    "social": {
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "discord": "Discord"
+    },
+    "copyright": "© 2025 God Plan. All rights reserved."
+  }
+}

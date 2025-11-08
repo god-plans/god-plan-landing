@@ -1,0 +1,156 @@
+<template>
+  <header class="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <NuxtLink to="/" class="flex items-center space-x-2">
+          <img
+            src="/logo/logo-icon.svg"
+            alt="God Plan Logo"
+            class="w-8 h-8"
+          />
+          <span class="font-bold text-xl text-gray-900 dark:text-white">God Plan</span>
+        </NuxtLink>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            v-for="item in navItems"
+            :key="item.key"
+            :href="item.href"
+            class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
+            {{ item.label }}
+          </a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center space-x-4">
+          <!-- Language Switcher -->
+          <div class="hidden md:flex items-center space-x-2">
+            <button
+              v-for="locale in availableLocales"
+              :key="locale.code"
+              @click="switchToLocale(locale.code)"
+              :class="[
+                'px-2 py-1 text-sm rounded transition-colors',
+                currentLocale === locale.code
+                  ? 'bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
+              ]"
+            >
+              {{ locale.name }}
+            </button>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button
+            @click="toggleTheme"
+            class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <v-icon v-if="colorMode.preference === 'dark'" size="20">mdi-white-balance-sunny</v-icon>
+            <v-icon v-else size="20">mdi-weather-night</v-icon>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            @click="toggleMobileMenu"
+            class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <v-icon size="20">{{ mobileMenuOpen ? 'mdi-close' : 'mdi-menu' }}</v-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        v-if="mobileMenuOpen"
+        class="md:hidden border-t border-gray-200 dark:border-gray-800 py-4"
+      >
+        <nav class="flex flex-col space-y-4">
+          <a
+            v-for="item in navItems"
+            :key="item.key"
+            :href="item.href"
+            @click="closeMobileMenu"
+            class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
+            {{ item.label }}
+          </a>
+
+          <!-- Mobile Language Switcher -->
+          <div class="flex items-center space-x-2 pt-4 border-t border-gray-200 dark:border-gray-800">
+            <span class="text-sm text-gray-500 dark:text-gray-400">{{ t('nav.language') }}:</span>
+            <button
+              v-for="locale in availableLocales"
+              :key="locale.code"
+              @click="setLocaleAndClose(locale.code)"
+              :class="[
+                'px-3 py-1 text-sm rounded transition-colors',
+                currentLocale === locale.code
+                  ? 'bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
+              ]"
+            >
+              {{ locale.name }}
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+// @ts-ignore - useSwitchLocalePath is auto-imported by @nuxtjs/i18n module
+const switchLocalePath = useSwitchLocalePath()
+// @ts-ignore - useColorMode is auto-imported by @nuxtjs/color-mode module
+const colorMode = useColorMode()
+const { t, locale } = useI18n()
+
+const mobileMenuOpen = ref(false)
+
+const currentLocale = computed(() => locale.value)
+
+const availableLocales = [
+  { code: 'en', name: 'EN' },
+  { code: 'fa', name: 'FA' }
+]
+
+const navItems = [
+  { key: 'home', label: t('nav.home'), href: '#home' },
+  { key: 'projects', label: t('nav.projects'), href: '#projects' },
+  { key: 'features', label: t('nav.features'), href: '#features' },
+  { key: 'pricing', label: t('nav.pricing'), href: '#pricing' },
+  { key: 'contact', label: t('nav.contact'), href: '#contact' },
+  { key: 'docs', label: t('nav.docs'), href: '/docs' }
+]
+
+const toggleTheme = () => {
+  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+}
+
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+  mobileMenuOpen.value = false
+}
+
+const switchToLocale = (localeCode: string) => {
+  // @ts-ignore - navigateTo is auto-imported by Nuxt
+  navigateTo(switchLocalePath(localeCode))
+}
+
+const setLocaleAndClose = (newLocale: string) => {
+  switchToLocale(newLocale)
+  closeMobileMenu()
+}
+</script>
+
+<style scoped>
+/* Header specific styles */
+</style>

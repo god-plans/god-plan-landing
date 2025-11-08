@@ -1,0 +1,9 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- God Icon -->
+  <circle cx="25" cy="30" r="18" fill="#6366f1"/>
+  <text x="25" y="36" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">G</text>
+
+  <!-- Text -->
+  <text x="55" y="25" fill="#1f2937" font-family="Arial, sans-serif" font-size="20" font-weight="bold">God Plan</text>
+  <text x="55" y="45" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Modern Admin Solutions</text>
+</svg>
