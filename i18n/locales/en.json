@@ -11,7 +11,23 @@
     "title": "Divine Innovation Meets Modern Development",
     "subtitle": "Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.",
     "getStarted": "Get Started",
-    "viewProjects": "View Projects"
+    "viewProjects": "View Projects",
+    "stats": {
+      "components": "50+",
+      "componentsLabel": "Components",
+      "downloads": "10k+",
+      "downloadsLabel": "Downloads",
+      "opensource": "100%",
+      "opensourceLabel": "Open Source",
+      "support": "24/7",
+      "supportLabel": "Community"
+    },
+    "socialProof": {
+      "trustedBy": "Trusted by developers worldwide",
+      "companies": "Leading companies use our dashboards",
+      "stars": "4.9/5",
+      "starsLabel": "Average rating"
+    }
   },
   "projects": {
     "title": "Our Projects",
@@ -27,7 +43,13 @@
     },
     "viewDemo": "View Demo",
     "viewDocs": "View Docs",
-    "viewCode": "View Code"
+    "viewCode": "View Code",
+    "cta": {
+      "title": "Ready to build something amazing?",
+      "subtitle": "Join thousands of developers using God Plan to create modern admin dashboards.",
+      "getStarted": "Get Started Now",
+      "viewGithub": "View on GitHub"
+    }
   },
   "features": {
     "title": "Why Choose God Plan?",
@@ -52,6 +74,24 @@
       "secure": {
         "title": "Secure by Default",
         "description": "Built with security best practices and regular security updates"
+      }
+    },
+    "benefits": {
+      "title": "Built for Developers, Loved by Teams",
+      "subtitle": "Join a community of developers building the next generation of admin dashboards",
+      "items": {
+        "developer": {
+          "title": "Developer Experience",
+          "description": "Intuitive APIs and comprehensive documentation"
+        },
+        "production": {
+          "title": "Production Ready",
+          "description": "Battle-tested components and best practices"
+        },
+        "community": {
+          "title": "Global Community",
+          "description": "Active community and regular updates"
+        }
       }
     }
   },
@@ -98,7 +138,32 @@
         ]
       }
     },
-    "cta": "Get Started"
+    "cta": "Get Started",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "commercial": {
+          "question": "Can I use God Plan for commercial projects?",
+          "answer": "Yes! God Plan is open source and free to use for both personal and commercial projects."
+        },
+        "enterprise": {
+          "question": "Do you offer enterprise support?",
+          "answer": "Yes, we offer dedicated enterprise support with custom development, priority support, and on-premise deployment options."
+        },
+        "documentation": {
+          "question": "What's included in the documentation?",
+          "answer": "Our documentation includes API references, component guides, deployment instructions, and best practices for all our projects."
+        },
+        "customization": {
+          "question": "How customizable are the dashboards?",
+          "answer": "Extremely customizable! You can modify themes, layouts, components, and add your own features while maintaining the core functionality."
+        },
+        "updates": {
+          "question": "How often do you release updates?",
+          "answer": "We release regular updates with new features, security patches, and performance improvements. Major releases occur quarterly."
+        }
+      }
+    }
   },
   "contact": {
     "title": "Get in Touch",
@@ -109,7 +174,34 @@
       "company": "Company",
       "message": "Message",
       "submit": "Send Message"
-    }
+    },
+    "info": {
+      "email": {
+        "title": "Email",
+        "value": "'godplan.dev'",
+        "subtitle": "We'll respond within 24 hours"
+      },
+      "github": {
+        "title": "GitHub",
+        "value": "'god-plan'",
+        "subtitle": "Report issues and contribute"
+      },
+      "discord": {
+        "title": "Community",
+        "value": "Discord Server",
+        "subtitle": "Join our community discussions"
+      }
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Get the latest updates on new features, releases, and tutorials.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing! You'll receive our latest updates.",
+      "error": "Please enter your email address"
+    },
+    "success": "Thank you for your message! We'll get back to you soon.",
+    "error": "There was an error sending your message. Please try again."
   },
   "footer": {
     "description": "Modern admin dashboards built with divine innovation and cutting-edge technology.",

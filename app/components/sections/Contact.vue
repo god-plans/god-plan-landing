@@ -84,9 +84,9 @@
                   <v-icon size="24" class="text-indigo-600 dark:text-indigo-400">mdi-email</v-icon>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
-                  <p class="text-gray-600 dark:text-gray-300">hello@godplan.dev</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">We'll respond within 24 hours</p>
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.email.title') }}</h3>
+                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.info.email.value') }}</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('contact.info.email.subtitle') }}</p>
                 </div>
               </div>
 
@@ -95,9 +95,9 @@
                   <v-icon size="24" class="text-indigo-600 dark:text-indigo-400">mdi-github</v-icon>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">GitHub</h3>
-                  <p class="text-gray-600 dark:text-gray-300">@god-plan</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Report issues and contribute</p>
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.github.title') }}</h3>
+                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.info.github.value') }}</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('contact.info.github.subtitle') }}</p>
                 </div>
               </div>
 
@@ -106,31 +106,31 @@
                   <v-icon size="24" class="text-indigo-600 dark:text-indigo-400">mdi-discord</v-icon>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Community</h3>
-                  <p class="text-gray-600 dark:text-gray-300">Discord Server</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Join our community discussions</p>
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.discord.title') }}</h3>
+                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.info.discord.value') }}</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('contact.info.discord.subtitle') }}</p>
                 </div>
               </div>
             </div>
 
             <!-- Newsletter Signup -->
             <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
-              <h3 class="text-xl font-bold mb-3">Stay Updated</h3>
+              <h3 class="text-xl font-bold mb-3">{{ t('contact.newsletter.title') }}</h3>
               <p class="mb-4 opacity-90">
-                Get the latest updates on new features, releases, and tutorials.
+                {{ t('contact.newsletter.subtitle') }}
               </p>
               <div class="flex gap-2">
                 <input
                   v-model="newsletterEmail"
                   type="email"
-                  placeholder="Enter your email"
+                  :placeholder="t('contact.newsletter.placeholder')"
                   class="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
                 />
                 <button
                   @click="subscribeNewsletter"
                   class="bg-white text-indigo-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Subscribe
+                  {{ t('contact.newsletter.subscribe') }}
                 </button>
               </div>
             </div>
@@ -176,11 +176,11 @@ const submitForm = async () => {
     }
 
     // Show success message (you could use a toast notification here)
-    alert('Thank you for your message! We\'ll get back to you soon.')
+    alert(t('contact.success'))
 
   } catch (error) {
     console.error('Form submission error:', error)
-    alert('There was an error sending your message. Please try again.')
+    alert(t('contact.error'))
   } finally {
     isSubmitting.value = false
   }
@@ -188,7 +188,7 @@ const submitForm = async () => {
 
 const subscribeNewsletter = () => {
   if (!newsletterEmail.value) {
-    alert('Please enter your email address')
+    alert(t('contact.newsletter.error'))
     return
   }
 
@@ -196,7 +196,7 @@ const subscribeNewsletter = () => {
   console.log('Newsletter subscription:', newsletterEmail.value)
 
   newsletterEmail.value = ''
-  alert('Thank you for subscribing! You\'ll receive our latest updates.')
+  alert(t('contact.newsletter.success'))
 }
 </script>
 

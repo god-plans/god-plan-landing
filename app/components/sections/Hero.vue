@@ -49,21 +49,48 @@
         <!-- Stats -->
         <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
           <div class="text-center">
-            <div class="text-3xl font-bold mb-2">50+</div>
-            <div class="text-sm opacity-80">Components</div>
+            <div class="text-3xl font-bold mb-2">{{ t('hero.stats.components') }}</div>
+            <div class="text-sm opacity-80">{{ t('hero.stats.componentsLabel') }}</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold mb-2">10k+</div>
-            <div class="text-sm opacity-80">Downloads</div>
+            <div class="text-3xl font-bold mb-2">{{ t('hero.stats.downloads') }}</div>
+            <div class="text-sm opacity-80">{{ t('hero.stats.downloadsLabel') }}</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold mb-2">100%</div>
-            <div class="text-sm opacity-80">Open Source</div>
+            <div class="text-3xl font-bold mb-2">{{ t('hero.stats.opensource') }}</div>
+            <div class="text-sm opacity-80">{{ t('hero.stats.opensourceLabel') }}</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold mb-2">24/7</div>
-            <div class="text-sm opacity-80">Community</div>
+            <div class="text-3xl font-bold mb-2">{{ t('hero.stats.support') }}</div>
+            <div class="text-sm opacity-80">{{ t('hero.stats.supportLabel') }}</div>
           </div>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="mt-12 text-center">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm opacity-90">
+            <div class="flex items-center gap-2">
+              <div class="flex -space-x-1">
+                <div class="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full border-2 border-white"></div>
+                <div class="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-2 border-white"></div>
+                <div class="w-6 h-6 bg-gradient-to-r from-pink-500 to-red-500 rounded-full border-2 border-white"></div>
+                <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full border-2 border-white flex items-center justify-center text-xs text-white font-bold">+</div>
+              </div>
+              <span>{{ t('hero.socialProof.trustedBy') }}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex gap-1">
+                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
+                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
+                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
+                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
+                <v-icon size="16" class="text-yellow-400">mdi-star-half-full</v-icon>
+              </div>
+              <span class="font-semibold">{{ t('hero.socialProof.stars') }}</span>
+              <span class="text-xs">{{ t('hero.socialProof.starsLabel') }}</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm opacity-75">{{ t('hero.socialProof.companies') }}</p>
         </div>
       </div>
     </div>

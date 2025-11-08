@@ -21,16 +21,16 @@
       <!-- Call to action -->
       <div class="text-center mt-16">
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
-          <h3 class="text-2xl font-bold mb-4">Ready to build something amazing?</h3>
+          <h3 class="text-2xl font-bold mb-4">{{ t('projects.cta.title') }}</h3>
           <p class="text-lg opacity-90 mb-6">
-            Join thousands of developers using God Plan to create modern admin dashboards.
+            {{ t('projects.cta.subtitle') }}
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink to="/docs" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Now
+              {{ t('projects.cta.getStarted') }}
             </NuxtLink>
             <a href="https://github.com/god-plan" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              View on GitHub
+              {{ t('projects.cta.viewGithub') }}
             </a>
           </div>
         </div>

@@ -59,31 +59,19 @@
       <!-- FAQ Section -->
       <div class="mt-20 max-w-4xl mx-auto">
         <h3 class="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-          Frequently Asked Questions
+          {{ t('pricing.faq.title') }}
         </h3>
         <div class="space-y-6">
-          <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
+          <div
+            v-for="(faq, key) in faqItems"
+            :key="key"
+            class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow"
+          >
             <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">
-              Can I use God Plan for commercial projects?
+              {{ faq.question }}
             </h4>
             <p class="text-gray-600 dark:text-gray-300">
-              Yes! God Plan is open source and free to use for both personal and commercial projects.
-            </p>
-          </div>
-          <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
-            <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">
-              Do you offer enterprise support?
-            </h4>
-            <p class="text-gray-600 dark:text-gray-300">
-              Yes, we offer dedicated enterprise support with custom development, priority support, and on-premise deployment options.
-            </p>
-          </div>
-          <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
-            <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">
-              What's included in the documentation?
-            </h4>
-            <p class="text-gray-600 dark:text-gray-300">
-              Our documentation includes API references, component guides, deployment instructions, and best practices for all our projects.
+              {{ faq.answer }}
             </p>
           </div>
         </div>
@@ -118,6 +106,29 @@ const plans = {
     period: t('pricing.plans.enterprise.period'),
     description: t('pricing.plans.enterprise.description'),
     features: t('pricing.plans.enterprise.features')
+  }
+}
+
+const faqItems = {
+  commercial: {
+    question: t('pricing.faq.questions.commercial.question'),
+    answer: t('pricing.faq.questions.commercial.answer')
+  },
+  enterprise: {
+    question: t('pricing.faq.questions.enterprise.question'),
+    answer: t('pricing.faq.questions.enterprise.answer')
+  },
+  documentation: {
+    question: t('pricing.faq.questions.documentation.question'),
+    answer: t('pricing.faq.questions.documentation.answer')
+  },
+  customization: {
+    question: t('pricing.faq.questions.customization.question'),
+    answer: t('pricing.faq.questions.customization.answer')
+  },
+  updates: {
+    question: t('pricing.faq.questions.updates.question'),
+    answer: t('pricing.faq.questions.updates.answer')
   }
 }
 </script>

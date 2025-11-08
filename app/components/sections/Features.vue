@@ -35,27 +35,27 @@
       <!-- Additional benefits -->
       <div class="mt-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
         <div class="text-center mb-8">
-          <h3 class="text-2xl font-bold mb-4">Built for Developers, Loved by Teams</h3>
+          <h3 class="text-2xl font-bold mb-4">{{ t('features.benefits.title') }}</h3>
           <p class="text-lg opacity-90">
-            Join a community of developers building the next generation of admin dashboards
+            {{ t('features.benefits.subtitle') }}
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
             <div class="text-3xl font-bold mb-2">🚀</div>
-            <h4 class="font-semibold mb-2">Developer Experience</h4>
-            <p class="text-sm opacity-90">Intuitive APIs and comprehensive documentation</p>
+            <h4 class="font-semibold mb-2">{{ t('features.benefits.items.developer.title') }}</h4>
+            <p class="text-sm opacity-90">{{ t('features.benefits.items.developer.description') }}</p>
           </div>
           <div>
             <div class="text-3xl font-bold mb-2">🎯</div>
-            <h4 class="font-semibold mb-2">Production Ready</h4>
-            <p class="text-sm opacity-90">Battle-tested components and best practices</p>
+            <h4 class="font-semibold mb-2">{{ t('features.benefits.items.production.title') }}</h4>
+            <p class="text-sm opacity-90">{{ t('features.benefits.items.production.description') }}</p>
           </div>
           <div>
             <div class="text-3xl font-bold mb-2">🌍</div>
-            <h4 class="font-semibold mb-2">Global Community</h4>
-            <p class="text-sm opacity-90">Active community and regular updates</p>
+            <h4 class="font-semibold mb-2">{{ t('features.benefits.items.community.title') }}</h4>
+            <p class="text-sm opacity-90">{{ t('features.benefits.items.community.description') }}</p>
           </div>
         </div>
       </div>
