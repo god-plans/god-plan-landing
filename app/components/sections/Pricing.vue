@@ -38,7 +38,7 @@
               :key="feature"
               class="flex items-center text-gray-700 dark:text-gray-200"
             >
-              <v-icon size="16" class="text-green-500 dark:text-green-400 me-3">mdi-check-circle</v-icon>
+              <Icon name="lucide:check-circle" size="16" class="text-green-500 dark:text-green-400 me-3" />
               <span class="text-sm text-gray-600 dark:text-gray-300">{{ feature }}</span>
             </div>
           </div>

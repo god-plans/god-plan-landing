@@ -68,8 +68,8 @@
                 :disabled="isSubmitting"
                 class="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
               >
-                <v-icon v-if="isSubmitting" size="20" class="me-2 animate-spin">mdi-loading</v-icon>
-                <v-icon v-else size="20" class="me-2">mdi-send</v-icon>
+                <Icon v-if="isSubmitting" name="lucide:refresh-ccw" size="20" class="me-2 animate-spin" />
+                <Icon v-else name="lucide:send" size="20" class="me-2" />
                 {{ t('contact.form.submit') }}
               </button>
             </form>
@@ -81,7 +81,7 @@
             <div class="space-y-6">
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <v-icon size="24" class="text-indigo-600 dark:text-indigo-400">mdi-email</v-icon>
+                  <Icon name="lucide:mail" size="24" class="text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.email.title') }}</h3>
@@ -92,7 +92,7 @@
 
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <v-icon size="24" class="text-indigo-600 dark:text-indigo-400">mdi-github</v-icon>
+                  <Icon name="lucide:github" size="24" class="text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.github.title') }}</h3>
@@ -103,7 +103,7 @@
 
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <v-icon size="24" class="text-indigo-600 dark:text-indigo-400">mdi-discord</v-icon>
+                  <Icon name="lucide:message-circle" size="24" class="text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.discord.title') }}</h3>

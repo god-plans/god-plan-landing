@@ -22,11 +22,11 @@
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <NuxtLink to="/docs" class="btn-primary">
-            <v-icon size="20" class="me-2">mdi-rocket</v-icon>
+            <Icon name="lucide:rocket" size="20" class="me-2" />
             {{ t('hero.getStarted') }}
           </NuxtLink>
           <a href="#projects" class="btn-secondary">
-            <v-icon size="20" class="me-2">mdi-eye</v-icon>
+            <Icon name="lucide:eye" size="20" class="me-2" />
             {{ t('hero.viewProjects') }}
           </a>
         </div>
@@ -80,11 +80,11 @@
             </div>
             <div class="flex items-center gap-2">
               <div class="flex gap-1">
-                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
-                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
-                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
-                <v-icon size="16" class="text-yellow-400">mdi-star</v-icon>
-                <v-icon size="16" class="text-yellow-400">mdi-star-half-full</v-icon>
+                <Icon name="lucide:star" size="16" class="text-yellow-400" />
+                <Icon name="lucide:star" size="16" class="text-yellow-400" />
+                <Icon name="lucide:star" size="16" class="text-yellow-400" />
+                <Icon name="lucide:star" size="16" class="text-yellow-400" />
+                <Icon name="lucide:star" size="16" class="text-yellow-400" />
               </div>
               <span class="font-semibold">{{ t('hero.socialProof.stars') }}</span>
               <span class="text-xs">{{ t('hero.socialProof.starsLabel') }}</span>
@@ -97,7 +97,7 @@
 
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <v-icon size="24" class="text-white/70">mdi-chevron-down</v-icon>
+      <Icon name="lucide:chevron-down" size="24" class="text-white/70" />
     </div>
   </section>
 </template>

@@ -45,9 +45,7 @@
             :key="feature"
             class="flex items-center"
           >
-            <v-icon size="12" class="text-green-500 me-2"
-              >mdi-check-circle</v-icon
-            >
+            <Icon name="lucide:check-circle" size="12" class="text-green-500 me-2" />
             {{ feature }}
           </li>
         </ul>
@@ -62,7 +60,7 @@
           rel="noopener noreferrer"
           class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
-          <v-icon size="16" class="me-1">mdi-eye</v-icon>
+          <Icon name="lucide:eye" size="16" class="me-1" />
           {{ t("projects.viewDemo") }}
         </a>
         <a
@@ -70,7 +68,7 @@
           :href="project.docs"
           class="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
-          <v-icon size="16" class="me-1">mdi-book-open</v-icon>
+          <Icon name="lucide:book-open" size="16" class="me-1" />
           {{ t("projects.viewDocs") }}
         </a>
         <a
@@ -80,7 +78,7 @@
           rel="noopener noreferrer"
           class="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
-          <v-icon size="16" class="me-1">mdi-github</v-icon>
+          <Icon name="lucide:git-branch" size="16" class="me-1" />
           {{ t("projects.viewCode") }}
         </a>
       </div>

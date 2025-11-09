@@ -6,7 +6,8 @@
     "pricing": "Pricing",
     "contact": "Contact",
     "docs": "Docs",
-    "language": "Language"
+    "language": "Language",
+    "github": "GitHub"
   },
   "hero": {
     "title": "Professional Dashboards, Landing Pages & UI Kits",
@@ -213,7 +214,8 @@
       "resources": "Resources",
       "about": "About Us",
       "contact": "Contact",
-      "github": "GitHub"
+      "github": "GitHub",
+      "docs": "Docs"
     },
     "social": {
       "github": "GitHub",

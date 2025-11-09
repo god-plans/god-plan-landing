@@ -13,7 +13,15 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     "@nuxtjs/i18n",
+    '@nuxt/icon',
   ],
+
+  // Icon configuration
+  icon: {
+    serverBundle: {
+      collections: ['lucide']
+    }
+  },
 
   // Auto-imports for better DX
   imports: {
@@ -43,9 +51,7 @@ export default defineNuxtConfig({
 
   // CSS
   css: [
-    // Load MDI font for icons
     'vuetify/lib/styles/main.sass',
-
   ],
 
   // Build configuration

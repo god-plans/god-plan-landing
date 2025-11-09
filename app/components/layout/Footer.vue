@@ -22,7 +22,7 @@
               rel="noopener noreferrer"
               class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors"
             >
-              <v-icon size="20">mdi-github</v-icon>
+              <Icon name="lucide:github" size="20" />
             </a>
             <a
               href="https://twitter.com/godplan"
@@ -30,7 +30,7 @@
               rel="noopener noreferrer"
               class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors"
             >
-              <v-icon size="20">mdi-twitter</v-icon>
+              <Icon name="lucide:twitter" size="20" />
             </a>
             <a
               href="https://discord.gg/godplan"
@@ -38,7 +38,7 @@
               rel="noopener noreferrer"
               class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors"
             >
-              <v-icon size="20">mdi-discord</v-icon>
+              <Icon name="lucide:message-circle" size="20" />
             </a>
           </div>
         </div>

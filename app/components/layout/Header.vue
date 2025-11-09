@@ -48,8 +48,8 @@
             @click="toggleTheme"
             class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
-            <v-icon v-if="colorMode.preference === 'dark'" size="20">mdi-weather-sunny</v-icon>
-            <v-icon v-else size="20">mdi-weather-night</v-icon>
+            <Icon v-if="colorMode.preference === 'dark'" name="lucide:sun" size="20" />
+            <Icon v-else name="lucide:moon" size="20" />
           </button>
 
           <!-- Mobile Menu Button -->
@@ -57,7 +57,8 @@
             @click="toggleMobileMenu"
             class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
-            <v-icon size="20">{{ mobileMenuOpen ? 'mdi-close' : 'mdi-menu' }}</v-icon>
+            <Icon v-if="mobileMenuOpen" name="lucide:x" size="20" />
+            <Icon v-else name="lucide:menu" size="20" />
           </button>
         </div>
       </div>
@@ -132,7 +133,8 @@ const navItems = computed(() => [
   { key: 'features', label: t('nav.features'), href: '#features' },
   { key: 'pricing', label: t('nav.pricing'), href: '#pricing' },
   { key: 'contact', label: t('nav.contact'), href: '#contact' },
-  { key: 'docs', label: t('nav.docs'), href: '/docs' }
+  { key: 'docs', label: t('nav.docs'), href: 'https://docs.godplans.org/' },
+  { key: 'github', label: t('nav.github'), href: 'https://github.com/god-plans' }
 ])
 
 const toggleTheme = () => {
