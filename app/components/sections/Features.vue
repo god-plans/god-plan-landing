@@ -22,12 +22,12 @@
           class="feature-card border-1 border-solid border-gray-100 dark:border-gray-900 bg-gray-50 dark:bg-gray-950 rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="flex items-center justify-center w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full mb-4 mx-auto"
+            class="flex items-center justify-center size-32 mb-4 mx-auto"
           >
             <img
-              :src="`/icons/${key}.svg`"
+              :src="`/icons/${key}.webp`"
               :alt="feature.title"
-              class="w-8 h-8"
+              
             />
           </div>
           <h3
@@ -58,7 +58,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <div class="text-3xl font-bold mb-2">🚀</div>
+            <div class="text-3xl mb-2"><i class="fas fa-rocket"></i></div>
             <h4 class="font-semibold mb-2">
               {{ t("features.benefits.items.developer.title") }}
             </h4>

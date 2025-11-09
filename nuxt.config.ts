@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   css: [
     // Load MDI font for icons
     'vuetify/lib/styles/main.sass',
-    '@mdi/font/css/materialdesignicons.min.css'
+
   ],
 
   // Build configuration
