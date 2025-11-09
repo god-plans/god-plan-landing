@@ -1,6 +1,6 @@
 <template>
   <div
-    class="project-card dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+    class="project-card  dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
   >
     <!-- Image -->
     <div class="relative overflow-hidden">
@@ -109,6 +109,6 @@ defineProps<{
 
 <style scoped>
 .project-card {
-  border: 1px solid rgb(var(--v-theme-surface-variant));
+  border: 1px solid #e0e0e0;
 }
 </style>

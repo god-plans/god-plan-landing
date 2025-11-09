@@ -1,5 +1,5 @@
 <template>
-  <section id="pricing" class="pricing-section py-20 !dark:bg-gray-800">
+  <section id="pricing" class="pricing-section py-20 bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -15,7 +15,7 @@
           v-for="(plan, key) in plans"
           :key="key"
           :class="[
-            'pricing-card  dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300',
+            'pricing-card bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300',
             key === 'pro' ? 'border-2 border-indigo-500 transform scale-105' : 'border border-gray-200 dark:border-gray-700'
           ]"
         >
@@ -38,7 +38,7 @@
               :key="feature"
               class="flex items-center text-gray-700 dark:text-gray-200"
             >
-              <Icon name="lucide:check-circle" size="16" class="text-green-500 dark:text-green-400 me-3" />
+              <v-icon size="16" class="text-green-500 dark:text-green-400 me-3">mdi-check-circle</v-icon>
               <span class="text-sm text-gray-600 dark:text-gray-300">{{ feature }}</span>
             </div>
           </div>
@@ -65,7 +65,7 @@
           <div
             v-for="(faq, key) in faqItems"
             :key="key"
-            class=" dark:bg-gray-800 rounded-lg p-6 shadow"
+            class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow"
           >
             <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">
               {{ faq.question }}

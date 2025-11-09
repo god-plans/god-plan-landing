@@ -58,7 +58,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <div class=" mb-2  flex items-center justify-center">
+            <div class=" mb-2  flex items-center justify-center w-full">
               <img src="/icons/code.webp" alt="Developer" class="size-32" />
             </div>
             <h4 class="font-semibold mb-2">
@@ -69,7 +69,7 @@
             </p>
           </div>
           <div>
-            <div class=" mx-bold mb-2 flex items-center justify-center">
+            <div class=" mx-bold mb-2 flex items-center justify-center w-full">
               <img src="/icons/binrary.webp" alt="Production" class="size-32" />
             </div>
             <h4 class="font-semibold mb-2">
@@ -80,7 +80,7 @@
             </p>
           </div>
           <div>
-            <div class=" mx-bold mb-2 flex items-center justify-center">
+            <div class=" mx-bold mb-2 flex items-center justify-center w-full">
               <img src="/icons/community.webp" alt="Community" class="size-32" />
             </div>
             <h4 class="font-semibold mb-2">
@@ -126,10 +126,6 @@ const features = computed(() => ({
 </script>
 
 <style scoped>
-.feature-card {
-  border: 1px solid rgb(var(--v-theme-surface-variant));
-}
-
 .feature-card:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
