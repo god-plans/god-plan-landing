@@ -46,7 +46,7 @@
           <!-- Theme Toggle -->
           <button
             @click="toggleTheme"
-            class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            class="p-2 mt-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             <Icon v-if="colorMode.preference === 'dark'" name="lucide:sun" size="20" />
             <Icon v-else name="lucide:moon" size="20" />
@@ -55,7 +55,7 @@
           <!-- Mobile Menu Button -->
           <button
             @click="toggleMobileMenu"
-            class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            class="md:hidden mt-2 p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             <Icon v-if="mobileMenuOpen" name="lucide:x" size="20" />
             <Icon v-else name="lucide:menu" size="20" />

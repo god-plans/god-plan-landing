@@ -66,16 +66,16 @@ const projects = [
     github: null,
     features: ['Component Based', 'Modern React', 'Coming Soon', 'Coming Soon']
   },
-  {
-    name: 'God Panel (Angular)',
-    description: 'Coming Soon',
-    tech: ['Angular', 'TypeScript', 'Tailwind', 'RxJS'],
-    image: '/images/projects/vite-docs.svg',
-    demo: null,
-    docs: null,
-    github: null,
-    features: ['Enterprise Ready', 'Type Safety', 'Coming Soon', 'Coming Soon']
-  },
+  // {
+  //   name: 'God Panel (Angular)',
+  //   description: 'Coming Soon',
+  //   tech: ['Angular', 'TypeScript', 'Tailwind', 'RxJS'],
+  //   image: '/images/projects/vite-docs.svg',
+  //   demo: null,
+  //   docs: null,
+  //   github: null,
+  //   features: ['Enterprise Ready', 'Type Safety', 'Coming Soon', 'Coming Soon']
+  // },
   {
     name: 'God Kit (Vue & React)',
     description: 'Coming Soon',

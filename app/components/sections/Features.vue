@@ -58,7 +58,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <div class=" mb-2 mx-auto flex items-center justify-center">
+            <div class=" mb-2  flex items-center justify-center">
               <img src="/icons/code.webp" alt="Developer" class="size-32" />
             </div>
             <h4 class="font-semibold mb-2">
@@ -69,7 +69,7 @@
             </p>
           </div>
           <div>
-            <div class=" font mx-bold mb-2 flex items-center justify-center">
+            <div class=" mx-bold mb-2 flex items-center justify-center">
               <img src="/icons/binrary.webp" alt="Production" class="size-32" />
             </div>
             <h4 class="font-semibold mb-2">
@@ -80,7 +80,7 @@
             </p>
           </div>
           <div>
-            <div class=" font mx-bold mb-2 flex items-center justify-center">
+            <div class=" mx-bold mb-2 flex items-center justify-center">
               <img src="/icons/community.webp" alt="Community" class="size-32" />
             </div>
             <h4 class="font-semibold mb-2">
