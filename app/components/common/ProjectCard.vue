@@ -1,5 +1,7 @@
 <template>
-  <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+  <div
+    class="project-card dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+  >
     <!-- Image -->
     <div class="relative overflow-hidden">
       <img
@@ -7,7 +9,9 @@
         :alt="project.name"
         class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
+      ></div>
     </div>
 
     <!-- Content -->
@@ -32,14 +36,18 @@
 
       <!-- Features -->
       <div class="mb-6">
-        <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Features:</h4>
+        <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+        {{ t("projects.features") }}:
+        </h4>
         <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1">
           <li
             v-for="feature in project.features"
             :key="feature"
             class="flex items-center"
           >
-            <v-icon size="12" class="text-green-500 me-2">mdi-check-circle</v-icon>
+            <v-icon size="12" class="text-green-500 me-2"
+              >mdi-check-circle</v-icon
+            >
             {{ feature }}
           </li>
         </ul>
@@ -55,7 +63,7 @@
           class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
           <v-icon size="16" class="me-1">mdi-eye</v-icon>
-          {{ t('projects.viewDemo') }}
+          {{ t("projects.viewDemo") }}
         </a>
         <a
           v-if="project.docs"
@@ -63,7 +71,7 @@
           class="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
           <v-icon size="16" class="me-1">mdi-book-open</v-icon>
-          {{ t('projects.viewDocs') }}
+          {{ t("projects.viewDocs") }}
         </a>
         <a
           v-if="project.github"
@@ -73,7 +81,7 @@
           class="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
           <v-icon size="16" class="me-1">mdi-github</v-icon>
-          {{ t('projects.viewCode') }}
+          {{ t("projects.viewCode") }}
         </a>
       </div>
     </div>
@@ -81,24 +89,24 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { useI18n } from "vue-i18n";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 interface Project {
-  name: string
-  description: string
-  tech: string[]
-  image: string
-  demo?: string
-  docs?: string
-  github?: string
-  features: string[]
+  name: string;
+  description: string;
+  tech: string[];
+  image: string;
+  demo?: string;
+  docs?: string;
+  github?: string;
+  features: string[];
 }
 
 defineProps<{
-  project: Project
-}>()
+  project: Project;
+}>();
 </script>
 
 <style scoped>

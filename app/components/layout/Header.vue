@@ -126,14 +126,14 @@ const availableLocales = [
   { code: 'fa', name: 'FA' }
 ]
 
-const navItems = [
+const navItems = computed(() => [
   { key: 'home', label: t('nav.home'), href: '#home' },
   { key: 'projects', label: t('nav.projects'), href: '#projects' },
   { key: 'features', label: t('nav.features'), href: '#features' },
   { key: 'pricing', label: t('nav.pricing'), href: '#pricing' },
   { key: 'contact', label: t('nav.contact'), href: '#contact' },
   { key: 'docs', label: t('nav.docs'), href: '/docs' }
-]
+])
 
 const toggleTheme = () => {
   // @ts-ignore - preference is available on colorMode
