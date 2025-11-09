@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-page !bg-gray-50 dark:!bg-gray-900">
+  <div class="landing-page ">
     <!-- Hero Section -->
     <SectionsHero />
 

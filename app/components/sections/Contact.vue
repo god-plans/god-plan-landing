@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="contact-section py-20 bg-white dark:bg-gray-800">
+  <section id="contact" class="contact-section py-20  dark:bg-gray-800">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
