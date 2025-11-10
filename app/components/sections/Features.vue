@@ -24,10 +24,14 @@
           <div
             class="flex items-center justify-center size-32 mb-4 mx-auto"
           >
-            <img
+            <NuxtImg
               :src="`/icons/${key}.webp`"
               :alt="feature.title"
-              
+              format="webp"
+              quality="90"
+              loading="lazy"
+              width="128"
+              height="128"
             />
           </div>
           <h3
@@ -59,7 +63,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
             <div class=" mb-2  flex items-center justify-center w-full">
-              <img src="/icons/code.webp" alt="Developer" class="size-32" />
+              <NuxtImg src="/icons/code.webp" alt="Developer" format="webp" quality="90" loading="lazy" width="128" height="128" />
             </div>
             <h4 class="font-semibold mb-2">
               {{ t("features.benefits.items.developer.title") }}
@@ -70,7 +74,7 @@
           </div>
           <div>
             <div class=" mx-bold mb-2 flex items-center justify-center w-full">
-              <img src="/icons/binrary.webp" alt="Production" class="size-32" />
+              <NuxtImg src="/icons/binrary.webp" alt="Production" format="webp" quality="90" loading="lazy" width="128" height="128" />
             </div>
             <h4 class="font-semibold mb-2">
               {{ t("features.benefits.items.production.title") }}
@@ -81,7 +85,7 @@
           </div>
           <div>
             <div class=" mx-bold mb-2 flex items-center justify-center w-full">
-              <img src="/icons/community.webp" alt="Community" class="size-32" />
+              <NuxtImg src="/icons/community.webp" alt="Community" format="webp" quality="90" loading="lazy" width="128" height="128" />
             </div>
             <h4 class="font-semibold mb-2">
               {{ t("features.benefits.items.community.title") }}

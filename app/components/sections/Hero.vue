@@ -5,10 +5,14 @@
   >
     <!-- Background -->
     <div class="absolute inset-0">
-      <img
+      <NuxtImg
         src="/images/hero-background.webp"
         alt="Hero background"
+        format="webp"
+        quality="80"
         class="w-full h-full object-cover"
+        loading="eager"
+        sizes="100vw"
       />
       <div class="absolute inset-0 dark:bg-black/60 bg-white/60"></div>
     </div>
@@ -47,8 +51,12 @@
           <div
             class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto"
           >
-            <img
+            <NuxtImg
               :src="isDark?'/images/hero/hero-dark.png':'/images/hero/hero-light.png'"
+              format="webp"
+              quality="85"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Dashboard preview"
               class="w-full rounded-lg shadow-2xl"
             />

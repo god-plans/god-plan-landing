@@ -4,10 +4,13 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center space-x-2">
-          <img
+          <NuxtImg
             src="/logo/logo-icon.svg"
             alt="God Plan Logo"
+            width="32"
+            height="32"
             class="w-8 h-8"
+            loading="eager"
           />
             <span class="font-bold text-xl text-gray-900 dark:text-white">{{ t('header.brand') }}</span>
         </NuxtLink>

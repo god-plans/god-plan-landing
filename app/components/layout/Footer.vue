@@ -5,10 +5,13 @@
         <!-- Brand Section -->
         <div class="md:col-span-2">
           <div class="flex items-center space-x-2 mb-4">
-            <img
+            <NuxtImg
               src="/logo/logo-icon.svg"
               alt="God Plan Logo"
+              width="24"
+              height="24"
               class="w-8 h-8"
+              loading="lazy"
             />
             <span class="font-bold text-xl">{{ t('footer.brand') }}</span>
           </div>

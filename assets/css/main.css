@@ -10,10 +10,10 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', 'Roboto', sans-serif;
   line-height: 1.6;
-  color: rgb(var(--v-theme-on-surface));
-  background: rgb(var(--v-theme-surface));
+  color: rgb(31 41 55); /* gray-800 */
+  background: rgb(255 255 255); /* white */
 }
 
 /* Custom scrollbar */
@@ -22,16 +22,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(var(--v-theme-surface-variant));
+  background: rgb(243 244 246); /* gray-100 */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(var(--v-theme-primary));
+  background: rgb(99 102 241); /* indigo-500 */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--v-theme-primary), 0.8);
+  background: rgb(79 70 229); /* indigo-600 */
 }
 
 /* Smooth transitions */
@@ -41,5 +41,16 @@ body {
 
 /* Focus styles */
 .focus\:ring-primary:focus {
-  --tw-ring-color: rgb(var(--v-theme-primary));
+  --tw-ring-color: rgb(99 102 241); /* indigo-500 */
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Critical CSS for above-the-fold content */
+.hero-section {
+  contain: layout style paint;
 }
