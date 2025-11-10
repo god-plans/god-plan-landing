@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center space-x-2">
-          <NuxtImg
+          <img
             src="/logo/logo-icon.svg"
             alt="God Plan Logo"
             width="32"
@@ -50,6 +50,7 @@
           <button
             @click="toggleTheme"
             class="p-2 mt-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            :aria-label="colorMode.preference === 'dark' ? t('header.switchToLightMode') : t('header.switchToDarkMode')"
           >
             <Icon v-if="colorMode.preference === 'dark'" name="lucide:sun" size="20" />
             <Icon v-else name="lucide:moon" size="20" />
@@ -59,6 +60,8 @@
           <button
             @click="toggleMobileMenu"
             class="md:hidden mt-2 p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            :aria-label="t('header.toggleMobileMenu')"
+            :aria-expanded="mobileMenuOpen"
           >
             <Icon v-if="mobileMenuOpen" name="lucide:x" size="20" />
             <Icon v-else name="lucide:menu" size="20" />

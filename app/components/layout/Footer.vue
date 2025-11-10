@@ -15,19 +15,20 @@
             />
             <span class="font-bold text-xl">{{ t('footer.brand') }}</span>
           </div>
-          <p class="text-gray-800 dark:text-gray-200 mb-6">
+          <p class="text-gray-900 dark:text-gray-200 mb-6">
             {{ t('footer.description') }}
           </p>
           <div class="flex space-x-4">
             <a
-              href="https://github.com/god-plan"
+              href="https://github.com/god-plans"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors"
+              class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors"
+              aria-label="Visit our GitHub repository"
             >
               <Icon name="lucide:github" size="20" />
             </a>
-            <a
+            <!-- <a
               href="https://twitter.com/godplan"
               target="_blank"
               rel="noopener noreferrer"
@@ -42,7 +43,7 @@
               class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors"
             >
               <Icon name="lucide:message-circle" size="20" />
-            </a>
+            </a> -->
           </div>
         </div>
 
@@ -51,17 +52,17 @@
           <h3 class="font-semibold mb-4">{{ t('footer.links.products') }}</h3>
           <ul class="space-y-2">
             <li>
-              <NuxtLink to="#projects" class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors">
+              <NuxtLink to="#projects" class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors">
                 God Panel (Nuxt.js)
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#projects" class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors">
+              <NuxtLink to="#projects" class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors">
                 God Panel (Next.js)
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/docs" class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors">
+              <NuxtLink to="https://docs.godplans.org" class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors">
                 {{ t('footer.links.resources') }}
               </NuxtLink>
             </li>
@@ -73,17 +74,17 @@
           <h3 class="font-semibold mb-4">{{ t('footer.links.company') }}</h3>
           <ul class="space-y-2">
             <li>
-              <NuxtLink to="/about" class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors">
+              <NuxtLink to="/about" class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors">
                 {{ t('footer.links.about') }}
               </NuxtLink>
             </li>
             <li>
-              <a href="#contact" class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors">
+              <a href="#contact" class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors">
                 {{ t('footer.links.contact') }}
               </a>
             </li>
             <li>
-              <a href="https://github.com/god-plan" target="_blank" rel="noopener noreferrer" class="text-gray-700 dark:text-gray-200 hover:text-white transition-colors">
+              <a href="https://github.com/god-plans" target="_blank" rel="noopener noreferrer" class="text-gray-700 dark:text-gray-200 hover:text-gray-900 transition-colors">
                 {{ t('footer.links.github') }}
               </a>
             </li>
@@ -92,7 +93,7 @@
       </div>
 
       <!-- Bottom Section -->
-      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="border-t border-gray-900 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p class="text-gray-700 dark:text-gray-200 text-sm">
           {{ t('footer.copyright') }}
         </p>

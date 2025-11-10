@@ -29,7 +29,7 @@
             <NuxtLink to="/docs" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               {{ t('projects.cta.getStarted') }}
             </NuxtLink>
-            <a href="https://github.com/god-plan" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <a href="https://github.com/god-plans" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               {{ t('projects.cta.viewGithub') }}
             </a>
           </div>

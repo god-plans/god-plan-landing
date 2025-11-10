@@ -124,6 +124,7 @@
                   v-model="newsletterEmail"
                   type="email"
                   :placeholder="t('contact.newsletter.placeholder')"
+                  :aria-label="t('contact.newsletter.placeholder')"
                   class="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
                 />
                 <button

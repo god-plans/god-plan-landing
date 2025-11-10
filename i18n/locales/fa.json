@@ -51,7 +51,8 @@
       "subtitle": "به هزاران توسعه‌دهنده بپیوندید که از God Plan برای ایجاد داشبوردهای مدیریتی مدرن استفاده می‌کنند.",
       "getStarted": "همین حالا شروع کنید",
       "viewGithub": "مشاهده در گیت‌هاب"
-    }
+    },
+    "features": "ویژگی‌ها"
   },
   "features": {
     "title": "راه‌حل‌های کامل توسعه وب",
@@ -185,7 +186,7 @@
       },
       "github": {
         "title": "گیت‌هاب",
-        "value": "'god-plan'",
+        "value": "'god-plans'",
         "subtitle": "مشکلات را گزارش دهید و مشارکت کنید"
       },
       "discord": {
@@ -227,6 +228,9 @@
     "terms": "شرایط استفاده"
   },
   "header": {
-    "brand": "God Plan"
+    "brand": "God Plan",
+    "switchToLightMode": "تغییر به حالت روشن",
+    "switchToDarkMode": "تغییر به حالت تاریک",
+    "toggleMobileMenu": "باز/بست منوی موبایل"
   }
 }

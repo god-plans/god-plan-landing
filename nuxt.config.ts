@@ -23,8 +23,10 @@ export default defineNuxtConfig({
   // Icon configuration
   icon: {
     serverBundle: {
-      collections: ['lucide']
-    }
+      collections: ['lucide', 'solar'],
+
+    },
+
   },
 
   // Google Fonts configuration for performance
@@ -99,15 +101,15 @@ export default defineNuxtConfig({
   // Vite configuration for optimization
   vite: {
     optimizeDeps: {
-      include: ['vue', 'vue-router', 'pinia', '@vueuse/core']
+      include: ['vue', 'vue-router', 'pinia',]
     },
     build: {
       rollupOptions: {
         output: {
           manualChunks: {
             'vue-vendor': ['vue', 'vue-router'],
-            'ui-vendor': ['vuetify', '@nuxt/icon'],
-            'utils-vendor': ['pinia', '@vueuse/core']
+            'ui-vendor': ['vuetify'],
+            'utils-vendor': ['pinia',]
           }
         }
       }
@@ -130,6 +132,9 @@ export default defineNuxtConfig({
   // App configuration
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: 'God Plan - Divine Innovation & Modern Dashboards',
       titleTemplate: '%s | God Plan',
       meta: [

@@ -63,7 +63,7 @@ useHead({
         description: 'Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.',
         foundingDate: '2024',
         sameAs: [
-          'https://github.com/god-plan',
+          'https://github.com/god-plans',
           'https://twitter.com/godplan',
           'https://discord.gg/godplan'
         ],

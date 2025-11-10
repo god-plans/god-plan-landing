@@ -201,7 +201,7 @@ const { t } = useI18n();
 }
 
 .btn-secondary {
-  @apply border-2 border-white dark:text-white text-gray-900 hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  @apply border-2 border-white dark:text-white text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
 }
 
 .animate-bounce {

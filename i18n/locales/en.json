@@ -51,7 +51,8 @@
       "subtitle": "Join thousands of developers using God Plan to create modern admin dashboards.",
       "getStarted": "Get Started Now",
       "viewGithub": "View on GitHub"
-    }
+    },
+    "features": "Features"
   },
   "features": {
     "title": "Complete Web Development Solutions",
@@ -76,7 +77,11 @@
       "secure": {
         "title": "Enterprise Security",
         "description": "Built with security best practices, authentication systems, and data protection standards"
-      }
+      },
+   
+        "features": "Features"
+        
+      
     },
     "benefits": {
       "title": "Trusted by Developers & Businesses Worldwide",
@@ -180,12 +185,12 @@
     "info": {
       "email": {
         "title": "Email",
-        "value": "'godplan.dev'",
+        "value": "'godplans.dev'",
         "subtitle": "We'll respond within 24 hours"
       },
       "github": {
         "title": "GitHub",
-        "value": "'god-plan'",
+        "value": "'god-plans'",
         "subtitle": "Report issues and contribute"
       },
       "discord": {
@@ -227,6 +232,9 @@
     "terms": "Terms of Service"
   },
   "header": {
-    "brand": "God Plan"
+    "brand": "God Plan",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode",
+    "toggleMobileMenu": "Toggle mobile menu"
   }
 }
