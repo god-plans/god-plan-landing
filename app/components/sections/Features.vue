@@ -30,8 +30,7 @@
               format="webp"
               quality="90"
               loading="lazy"
-              width="128"
-              height="128"
+              sizes="128px"
             />
           </div>
           <h3

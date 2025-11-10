@@ -3,11 +3,15 @@
     class="project-card  dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
   >
     <!-- Image -->
-    <div class="relative overflow-hidden">
-      <img
+    <div class="relative overflow-hidden min-h-72 p-5 flex items-center justify-center">
+      <NuxtImg
         :src="project.image"
         :alt="project.name"
-        class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+        class="w-full  transition-transform duration-300 hover:scale-105"
+        format="webp"
+        quality="80"
+        loading="lazy"
+        
       />
       <div
         class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
@@ -52,15 +56,15 @@
       </div>
 
       <!-- Actions -->
-      <div class="flex flex-col sm:flex-row gap-3">
+      <div class="flex flex-col  gap-3">
         <a
           v-if="project.demo"
           :href="project.demo"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
+          class="flex flex-row items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
-          <Icon name="lucide:eye" size="16" class="me-1" />
+          <Icon name="lucide:eye" size="16" class="me-1 " />
           {{ t("projects.viewDemo") }}
         </a>
         <a
@@ -68,7 +72,7 @@
           :href="project.docs"
           target="_blank"
 
-          class="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
+          class="flex flex-row items-center justify-center border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
           <Icon name="lucide:book-open" size="16" class="me-1" />
           {{ t("projects.viewDocs") }}
@@ -78,7 +82,7 @@
           :href="project.github"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
+          class="flex flex-row items-center justify-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
           <Icon name="lucide:git-branch" size="16" class="me-1" />
           {{ t("projects.viewCode") }}

@@ -14,7 +14,7 @@
         loading="eager"
         sizes="100vw"
       />
-      <div class="absolute inset-0 dark:bg-black/60 bg-white/60"></div>
+      <div class="absolute inset-0 dark:bg-gray-900 bg-white/90"></div>
     </div>
 
     <!-- Content -->
@@ -49,14 +49,14 @@
         <!-- Dashboard Preview -->
         <div class="mt-12 relative">
           <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto"
+            class="bg-white/80 dark:bg-gray-800 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto"
           >
             <NuxtImg
               :src="isDark?'/images/hero/hero-dark.png':'/images/hero/hero-light.png'"
               format="webp"
               quality="85"
               loading="lazy"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              
               alt="Dashboard preview"
               class="w-full rounded-lg shadow-2xl"
             />

@@ -80,7 +80,7 @@ const projects = [
     name: 'God Kit (Vue & React)',
     description: 'Coming Soon',
     tech: ['Vue.js', 'React', 'Components', 'UI Kit'],
-    image: '/images/projects/nuxt-dashboard.svg',
+    image: '/images/projects/vite-docs.svg',
     demo: null,
     docs: null,
     github: null,
