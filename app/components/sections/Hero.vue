@@ -10,12 +10,12 @@
         alt="Hero background"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="absolute inset-0 dark:bg-black/60 bg-white/60"></div>
     </div>
 
     <!-- Content -->
     <div class="relative z-10 container mx-auto px-4 py-20">
-      <div class="max-w-4xl mx-auto text-center text-white">
+      <div class="max-w-4xl mx-auto text-center dark:text-white text-gray-800 mt-10">
         <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           {{ t("hero.title") }}
         </h1>
@@ -26,11 +26,17 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <NuxtLink to="https://docs.godplans.org/" class="btn-primary flex items-center justify-center">
+          <NuxtLink
+            to="https://docs.godplans.org/"
+            class="btn-primary flex items-center justify-center"
+          >
             <Icon name="lucide:rocket" size="24" class="me-2" />
             {{ t("hero.getStarted") }}
           </NuxtLink>
-          <a href="#projects" class="btn-secondary flex items-center justify-center">
+          <a
+            href="#projects"
+            class="btn-secondary flex items-center justify-center"
+          >
             <Icon name="lucide:eye" size="24" class="me-2" />
             {{ t("hero.viewProjects") }}
           </a>
@@ -42,7 +48,7 @@
             class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto"
           >
             <img
-              src="/images/hero-dashboard.svg"
+              :src="isDark?'/images/hero/hero-dark.png':'/images/hero/hero-light.png'"
               alt="Dashboard preview"
               class="w-full rounded-lg shadow-2xl"
             />
@@ -121,11 +127,31 @@
             </div>
             <div class="flex items-center gap-2">
               <div class="flex gap-1">
-                <Icon name="solar:star-bold" size="16" class="text-yellow-400" />
-                <Icon name="solar:star-bold" size="16" class="text-yellow-400" />
-                <Icon name="solar:star-bold" size="16" class="text-yellow-400" />
-                <Icon name="solar:star-bold" size="16" class="text-yellow-400" />
-                <Icon name="solar:star-bold" size="16" class="text-yellow-400" />
+                <Icon
+                  name="solar:star-bold"
+                  size="16"
+                  class="text-yellow-400"
+                />
+                <Icon
+                  name="solar:star-bold"
+                  size="16"
+                  class="text-yellow-400"
+                />
+                <Icon
+                  name="solar:star-bold"
+                  size="16"
+                  class="text-yellow-400"
+                />
+                <Icon
+                  name="solar:star-bold"
+                  size="16"
+                  class="text-yellow-400"
+                />
+                <Icon
+                  name="solar:star-bold"
+                  size="16"
+                  class="text-yellow-400"
+                />
               </div>
               <span class="font-semibold">{{
                 t("hero.socialProof.stars")
@@ -153,6 +179,10 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+// @ts-ignore - useColorMode is auto-imported by @nuxtjs/color-mode module
+const colorMode = useColorMode();
+
+const isDark = computed(() => colorMode.preference === "dark");
 
 const { t } = useI18n();
 </script>
@@ -163,7 +193,7 @@ const { t } = useI18n();
 }
 
 .btn-secondary {
-  @apply border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  @apply border-2 border-white dark:text-white text-gray-900 hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
 }
 
 .animate-bounce {

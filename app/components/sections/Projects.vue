@@ -51,9 +51,9 @@ const projects = [
     description: t('projects.nuxt.description'),
     tech: ['Nuxt.js', 'Vuetify', 'TypeScript', 'Tailwind'],
     image: '/images/projects/nuxt-dashboard.svg',
-    demo: 'https://demo.god-panel-nuxt.vercel.app',
-    docs: '/docs/nuxt',
-    github: 'https://github.com/god-plan/god-panel-nuxt',
+    demo: 'https://nuxtpanel.godplans.org',
+    docs: 'https://docs.godplans.org',
+    github: 'https://github.com/god-plans/god-panel-nuxt',
     features: ['SSR Ready', 'i18n Support', 'Dark Mode', 'Responsive']
   },
   {

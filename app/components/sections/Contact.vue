@@ -119,7 +119,7 @@
               <p class="mb-4 opacity-90">
                 {{ t('contact.newsletter.subtitle') }}
               </p>
-              <div class="flex gap-2">
+              <div class="flex flex-col sm:flex-row gap-2">
                 <input
                   v-model="newsletterEmail"
                   type="email"

@@ -15,7 +15,7 @@
           v-for="(plan, key) in plans"
           :key="key"
           :class="[
-            'pricing-card bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300',
+            'pricing-card  dark:bg-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300',
             key === 'pro' ? 'border-2 border-indigo-500 transform scale-105' : 'border border-gray-200 dark:border-gray-700'
           ]"
         >
@@ -65,7 +65,7 @@
           <div
             v-for="(faq, key) in faqItems"
             :key="key"
-            class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow"
+            class="dark:bg-gray-900 rounded-lg p-6 shadow"
           >
             <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">
               {{ faq.question }}

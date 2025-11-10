@@ -1,6 +1,6 @@
 <template>
   <div
-    class="project-card  dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+    class="project-card  dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
   >
     <!-- Image -->
     <div class="relative overflow-hidden">
@@ -52,7 +52,7 @@
       </div>
 
       <!-- Actions -->
-      <div class="flex gap-3">
+      <div class="flex flex-col sm:flex-row gap-3">
         <a
           v-if="project.demo"
           :href="project.demo"
@@ -66,6 +66,8 @@
         <a
           v-if="project.docs"
           :href="project.docs"
+          target="_blank"
+
           class="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-4 py-2 rounded-lg text-center text-sm font-medium transition-colors"
         >
           <Icon name="lucide:book-open" size="16" class="me-1" />
