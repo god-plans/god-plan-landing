@@ -31,7 +31,8 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'Roboto': [400, 500, 700],
-      'Inter': [400, 500, 600, 700]
+      'Inter': [400, 500, 600, 700],
+      'Vazirmatn': [300, 400, 500, 600, 700, 800, 900]
     },
     display: 'swap'
   },

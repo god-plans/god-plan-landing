@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', 'Roboto', sans-serif;
   line-height: 1.6;
   color: rgb(31 41 55); /* gray-800 */
   background: rgb(255 255 255); /* white */

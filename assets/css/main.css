@@ -54,3 +54,77 @@ img {
 .hero-section {
   contain: layout style paint;
 }
+
+/* Vazirmatn font for Persian/RTL language */
+html[lang="fa"] {
+  font-family: 'Vazirmatn', 'Inter', sans-serif;
+}
+
+html[lang="fa-IR"] {
+  font-family: 'Vazirmatn', 'Inter', sans-serif;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] {
+  font-family: 'Vazirmatn', 'Inter', sans-serif;
+}
+
+/* Ensure proper font loading for Persian text */
+html[lang="fa"] body,
+html[lang="fa-IR"] body,
+[dir="rtl"] body {
+  font-family: 'Vazirmatn', 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* RTL text improvements */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* Persian/Arabic text spacing */
+[dir="rtl"] p,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  line-height: 1.8;
+}
+
+/* Icon adjustments for RTL */
+[dir="rtl"] .me-1,
+[dir="rtl"] .me-2,
+[dir="rtl"] .me-3 {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .me-1 { margin-left: 0.25rem; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem; }
+[dir="rtl"] .me-3 { margin-left: 0.75rem; }
+
+/* Button and form adjustments for RTL */
+[dir="rtl"] button,
+[dir="rtl"] input,
+[dir="rtl"] textarea {
+  text-align: right;
+}
+
+/* Flex direction adjustments for RTL */
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
