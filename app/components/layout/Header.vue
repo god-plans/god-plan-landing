@@ -1,5 +1,7 @@
 <template>
-  <header class="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
+  <header
+    class="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800"
+  >
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -12,7 +14,9 @@
             class="w-8 h-8"
             loading="eager"
           />
-            <span class="font-bold text-xl text-gray-900 dark:text-white">{{ t('header.brand') }}</span>
+          <span class="font-bold text-xl text-gray-900 dark:text-white">{{
+            t("header.brand")
+          }}</span>
         </NuxtLink>
 
         <!-- Desktop Navigation -->
@@ -39,7 +43,7 @@
                 'px-2 py-1 text-sm rounded transition-colors',
                 currentLocale === locale.code
                   ? 'bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400',
               ]"
             >
               {{ locale.name }}
@@ -50,9 +54,17 @@
           <button
             @click="toggleTheme"
             class="p-2 mt-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            :aria-label="colorMode.preference === 'dark' ? t('header.switchToLightMode') : t('header.switchToDarkMode')"
+            :aria-label="
+              colorMode.preference === 'dark'
+                ? t('header.switchToLightMode')
+                : t('header.switchToDarkMode')
+            "
           >
-            <Icon v-if="colorMode.preference === 'dark'" name="lucide:sun" size="20" />
+            <Icon
+              v-if="colorMode.preference === 'dark'"
+              name="lucide:sun"
+              size="20"
+            />
             <Icon v-else name="lucide:moon" size="20" />
           </button>
 
@@ -86,22 +98,8 @@
           </a>
 
           <!-- Mobile Language Switcher -->
-          <div class="flex items-center space-x-2 pt-4 border-t border-gray-200 dark:border-gray-800">
-            <span class="text-sm text-gray-500 dark:text-gray-400">{{ t('nav.language') }}:</span>
-            <button
-              v-for="locale in availableLocales"
-              :key="locale.code"
-              @click="setLocaleAndClose(locale.code)"
-              :class="[
-                'px-3 py-1 text-sm rounded transition-colors',
-                currentLocale === locale.code
-                  ? 'bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400'
-              ]"
-            >
-              {{ locale.name }}
-            </button>
-          </div>
+
+          <LanguageSwitcher />
         </nav>
       </div>
     </div>
@@ -109,72 +107,76 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 // @ts-ignore - useSwitchLocalePath is auto-imported by @nuxtjs/i18n module
-const switchLocalePath = useSwitchLocalePath()
+const switchLocalePath = useSwitchLocalePath();
 // @ts-ignore - useColorMode is auto-imported by @nuxtjs/color-mode module
-const colorMode = useColorMode()
-const { t, locale, setLocale } = useI18n()
+const colorMode = useColorMode();
+const { t, locale, setLocale } = useI18n();
 
 // Initialize dark class on mount
 onMounted(() => {
-  if (process.client && colorMode.preference === 'dark') {
-    document.documentElement.classList.add('dark')
+  if (process.client && colorMode.preference === "dark") {
+    document.documentElement.classList.add("dark");
   }
-})
+});
 
-const mobileMenuOpen = ref(false)
+const mobileMenuOpen = ref(false);
 
-const currentLocale = computed(() => locale.value)
+const currentLocale = computed(() => locale.value);
 
 const availableLocales = [
-  { code: 'en', name: 'EN' },
-  { code: 'fa', name: 'FA' }
-]
+  { code: "en", name: "EN" },
+  { code: "fa", name: "FA" },
+];
 
 const navItems = computed(() => [
-  { key: 'home', label: t('nav.home'), href: '#home' },
-  { key: 'projects', label: t('nav.projects'), href: '#projects' },
-  { key: 'features', label: t('nav.features'), href: '#features' },
-  { key: 'pricing', label: t('nav.pricing'), href: '#pricing' },
-  { key: 'contact', label: t('nav.contact'), href: '#contact' },
-  { key: 'docs', label: t('nav.docs'), href: 'https://docs.godplans.org/' },
-  { key: 'github', label: t('nav.github'), href: 'https://github.com/god-plans' }
-])
+  { key: "home", label: t("nav.home"), href: "#home" },
+  { key: "projects", label: t("nav.projects"), href: "#projects" },
+  { key: "features", label: t("nav.features"), href: "#features" },
+  { key: "pricing", label: t("nav.pricing"), href: "#pricing" },
+  { key: "contact", label: t("nav.contact"), href: "#contact" },
+  { key: "docs", label: t("nav.docs"), href: "https://docs.godplans.org/" },
+  {
+    key: "github",
+    label: t("nav.github"),
+    href: "https://github.com/god-plans",
+  },
+]);
 
 const toggleTheme = () => {
   // @ts-ignore - preference is available on colorMode
-  const newTheme = colorMode.preference === 'dark' ? 'light' : 'dark'
-  colorMode.preference = newTheme
+  const newTheme = colorMode.preference === "dark" ? "light" : "dark";
+  colorMode.preference = newTheme;
 
   // Manually add/remove the 'dark' class for Tailwind dark mode
   if (process.client) {
-    const html = document.documentElement
-    if (newTheme === 'dark') {
-      html.classList.add('dark')
+    const html = document.documentElement;
+    if (newTheme === "dark") {
+      html.classList.add("dark");
     } else {
-      html.classList.remove('dark')
+      html.classList.remove("dark");
     }
   }
-}
+};
 
 const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value
-}
+  mobileMenuOpen.value = !mobileMenuOpen.value;
+};
 
 const closeMobileMenu = () => {
-  mobileMenuOpen.value = false
-}
+  mobileMenuOpen.value = false;
+};
 
 const switchToLocale = async (localeCode: string) => {
-  await setLocale(localeCode)
-}
+  await setLocale(localeCode);
+};
 
 const setLocaleAndClose = async (newLocale: string) => {
-  await switchToLocale(newLocale)
-  closeMobileMenu()
-}
+  await switchToLocale(newLocale);
+  closeMobileMenu();
+};
 </script>
 
 <style scoped>
