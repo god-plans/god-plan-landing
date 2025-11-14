@@ -65,7 +65,7 @@
 
               <button
                 type="submit"
-                :disabled="isSubmitting"
+                :disabled="true"
                 class="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
               >
                 <Icon v-if="isSubmitting" name="lucide:refresh-ccw" size="20" class="me-2 animate-spin" />
@@ -85,7 +85,9 @@
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.email.title') }}</h3>
-                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.info.email.value') }}</p>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    <a href="mailto:parsajiravand@gmail.com" class="text-indigo-600 dark:text-indigo-400">parsajiravand@gmail.com</a>
+                  </p>
                   <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('contact.info.email.subtitle') }}</p>
                 </div>
               </div>
@@ -96,7 +98,9 @@
                 </div>
                 <div>
                   <h3 class="font-semibold text-gray-900 dark:text-white mb-1">{{ t('contact.info.github.title') }}</h3>
-                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.info.github.value') }}</p>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    <a href="https://github.com/god-plans" target="_blank" class="text-indigo-600 dark:text-indigo-400">god-plans</a>
+                  </p>
                   <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('contact.info.github.subtitle') }}</p>
                 </div>
               </div>
@@ -128,6 +132,7 @@
                   class="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
                 />
                 <button
+                disabled
                   @click="subscribeNewsletter"
                   class="bg-white text-indigo-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >

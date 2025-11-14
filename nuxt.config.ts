@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
   // Sitemap configuration
   sitemap: {
-    hostname: 'https://godplan.dev',
+    hostname: 'https://godplans.org',
     gzip: true,
     routes: []
   },
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     public: {
       appName: 'God Plan',
       version: '1.0.0',
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://godplan.dev',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://godplans.org',
     }
   },
 
@@ -154,8 +154,8 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'God Plan - Divine Innovation & Modern Dashboards' },
         { property: 'og:description', content: 'Modern admin dashboards built with Nuxt.js, Next.js, and cutting-edge technology. Open source, customizable, and production-ready.' },
-        { property: 'og:image', content: 'https://godplan.dev/logo/logo-full.svg' },
-        { property: 'og:url', content: 'https://godplan.dev' },
+        { property: 'og:image', content: 'https://godplans.org/logo/logo-full.svg' },
+        { property: 'og:url', content: 'https://godplans.org' },
         { property: 'og:site_name', content: 'God Plan' },
         { property: 'og:locale', content: 'en_US' },
 
@@ -163,9 +163,9 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'God Plan - Divine Innovation & Modern Dashboards' },
         { name: 'twitter:description', content: 'Modern admin dashboards built with Nuxt.js, Next.js, and cutting-edge technology.' },
-        { name: 'twitter:image', content: 'https://godplan.dev/logo/logo-full.svg' },
-        { name: 'twitter:site', content: '@godplan' },
-        { name: 'twitter:creator', content: '@godplan' },
+        { name: 'twitter:image', content: 'https://godplans.org/logo/logo-full.svg' },
+        { name: 'twitter:site', content: '@godplans'},
+        { name: 'twitter:creator', content: '@godplans'},
 
         // Additional SEO
         { name: 'format-detection', content: 'telephone=no' },
@@ -183,7 +183,7 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
 
         // Canonical
-        { rel: 'canonical', href: 'https://godplan.dev' }
+        { rel: 'canonical', href: 'https://godplans.org' }
       ],
       script: [
         // Structured Data (JSON-LD)
@@ -193,13 +193,12 @@ export default defineNuxtConfig({
             '@context': 'https://schema.org',
             '@type': 'Organization',
             'name': 'God Plan',
-            'url': 'https://godplan.dev',
-            'logo': 'https://godplan.dev/logo/logo-full.svg',
+            'url': 'https://godplans.org',
+            'logo': 'https://godplans.org/logo/logo-full.svg',
             'description': 'Modern admin dashboards built with Nuxt.js, Next.js, and cutting-edge technology.',
             'sameAs': [
               'https://github.com/god-plans',
-              'https://twitter.com/godplan'
-            ],
+              'https://twitter.com/godplans'],
             'offers': {
               '@type': 'Offer',
               'category': 'Software',

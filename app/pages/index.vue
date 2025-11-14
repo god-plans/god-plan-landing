@@ -20,32 +20,32 @@
 <script setup lang="ts">
 // SEO
 useHead({
-  title: 'God Plan - Modern Admin Dashboards',
+  title: 'God Plans - Complete Web Development Solutions',
   meta: [
     {
       name: 'description',
       content: 'Open source admin dashboards built with Nuxt.js, Next.js, Vuetify, Material-UI. Production-ready, customizable, and feature-rich.'
     },
     // Open Graph
-    { property: 'og:title', content: 'God Plan - Modern Admin Dashboards' },
+    { property: 'og:title', content: 'God Plans - Complete Web Development Solutions' },
     { property: 'og:description', content: 'Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.' },
-    { property: 'og:image', content: 'https://godplan.dev/images/hero-dashboard.svg' },
-    { property: 'og:url', content: 'https://godplan.dev' },
+    { property: 'og:image', content: 'https://godplans.org/images/hero-dashboard.svg' },
+    { property: 'og:url', content: 'https://godplans.org' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'God Plan' },
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'God Plan - Modern Admin Dashboards' },
+    { name: 'twitter:title', content: 'God Plans - Complete Web Development Solutions' },
     { name: 'twitter:description', content: 'Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.' },
-    { name: 'twitter:image', content: 'https://godplan.dev/images/hero-dashboard.svg' },
-    { name: 'twitter:site', content: '@godplan' },
+    { name: 'twitter:image', content: 'https://godplans.org/images/hero-dashboard.svg' },
+    { name: 'twitter:site', content: '@godplans' },
     // Additional SEO
     { name: 'keywords', content: 'admin dashboard, nuxt.js, next.js, vuetify, material-ui, tailwind css, open source, typescript, react, vue' },
-    { name: 'author', content: 'God Plan Team' },
+    { name: 'author', content: 'God Plans Team' },
     { name: 'robots', content: 'index, follow' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://godplan.dev' }
+    { rel: 'canonical', href: 'https://godplans.org' }
   ]
 })
 
@@ -57,15 +57,15 @@ useHead({
       children: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'God Plan',
-        url: 'https://godplan.dev',
-        logo: 'https://godplan.dev/logo/logo-full.svg',
+        name: 'God Plans',
+        url: 'https://godplans.org',
+        logo: 'https://godplans.org/logo/logo-full.svg',
         description: 'Open source admin dashboards built with cutting-edge technology. Production-ready, customizable, and feature-rich.',
         foundingDate: '2024',
         sameAs: [
           'https://github.com/god-plans',
-          'https://twitter.com/godplan',
-          'https://discord.gg/godplan'
+          'https://twitter.com/godplans',
+          'https://discord.gg/godplans'
         ],
         offers: [
           {

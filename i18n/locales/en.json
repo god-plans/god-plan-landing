@@ -185,16 +185,16 @@
     "info": {
       "email": {
         "title": "Email",
-        "value": "'godplans.dev'",
+        "value": "parsajiravand",
         "subtitle": "We'll respond within 24 hours"
       },
       "github": {
         "title": "GitHub",
-        "value": "'god-plans'",
+        "value": "god-plans",
         "subtitle": "Report issues and contribute"
       },
       "discord": {
-        "title": "Community",
+        "title": "Community (coming soon)",
         "value": "Discord Server",
         "subtitle": "Join our community discussions"
       }
